@@ -38,11 +38,10 @@ const Survey = () => {
       [1, 1],
     ];
     const vectorTop = 80;
-    const vectorLeft = 180;
+    const vectorLeft = 150;
 
-    const [topDif, leftDif] = directions[
-      (Math.random() * directions.length) | 0
-    ];
+    const [topDif, leftDif] =
+      directions[(Math.random() * directions.length) | 0];
 
     setTop((a) => a + vectorTop * topDif);
     setLeft((a) => a + vectorLeft * leftDif);
@@ -107,91 +106,92 @@ const Survey = () => {
         <div className="Text">
           <p>1. Please select your age range among follows:</p>
           <div className="RadioDiv">
-            <input type="radio" id="huey" name="age" />
-            <label htmlFor="huey">... - 25</label>
+            <input type="radio" id="1a" name="age" />
+            <label htmlFor="1a">... - 25</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="dewey" name="age" />
-            <label htmlFor="dewey">25 - 30</label>
+            <input type="radio" id="1b" name="age" />
+            <label htmlFor="1b">25 - 30</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie" name="age" />
-            <label htmlFor="louie">30 - 35</label>
+            <input type="radio" id="1c" name="age" />
+            <label htmlFor="1c">30 - 35</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie1" name="age" />
-            <label htmlFor="louie">35 - ...</label>
+            <input type="radio" id="1d" name="age" />
+            <label htmlFor="1d">35 - ...</label>
           </div>
 
           <p>2. Please select your role in company:</p>
           <div className="RadioDiv">
-            <input type="radio" id="huey2" name="role" />
-            <label htmlFor="huey">Developer</label>
+            <input type="radio" id="2a" name="role" />
+            <label htmlFor="2a">Developer</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="devops" name="role" />
-            <label htmlFor="huey">DevOps</label>
+            <input type="radio" id="2b" name="role" />
+            <label htmlFor="2b">DevOps</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie3" name="role" />
-            <label htmlFor="louie">Product Manager</label>
+            <input type="radio" id="2c" name="role" />
+            <label htmlFor="2c">Product Manager</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie4" name="role" />
-            <label htmlFor="louie">QA</label>
+            <input type="radio" id="2d" name="role" />
+            <label htmlFor="2d">QA</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie5" name="role" />
-            <label htmlFor="louie">Manager</label>
+            <input type="radio" id="2e" name="role" />
+            <label htmlFor="2e">Manager</label>
           </div>
 
           <p>3. How much time are you working in company:</p>
           <div className="RadioDiv">
-            <input type="radio" id="huey21" name="time" />
-            <label htmlFor="huey">... - 1 year</label>
+            <input type="radio" id="3a" name="time" />
+            <label htmlFor="3a">... - 1 year</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie32" name="time" />
-            <label htmlFor="louie">1 year - 2 years</label>
+            <input type="radio" id="3b" name="time" />
+            <label htmlFor="3b">1 year - 2 years</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie43" name="time" />
-            <label htmlFor="louie">2 years - 4 years</label>
+            <input type="radio" id="3c" name="time" />
+            <label htmlFor="3c">2 years - 4 years</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie54" name="time" />
-            <label htmlFor="louie">4 years - ... </label>
+            <input type="radio" id="3d" name="time" />
+            <label htmlFor="3d">4 years - ... </label>
           </div>
 
           <p>4. Your favorite lunch drink is :</p>
           <div className="RadioDiv">
-            <input type="radio" id="huey2111" name="drink" />
-            <label htmlFor="huey">Tea</label>
+            <input type="radio" id="4a" name="drink" />
+            <label htmlFor="4a">Tea</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie3222" name="drink" />
-            <label htmlFor="louie">Coffee</label>
+            <input type="radio" id="4b" name="drink" />
+            <label htmlFor="4b">Coffee</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie4333" name="drink" />
-            <label htmlFor="louie">Milk</label>
+            <input type="radio" id="4c" name="drink" />
+            <label htmlFor="4c">Milk</label>
           </div>
           <div className="RadioDiv">
-            <input type="radio" id="louie5433" name="drink" />
-            <label htmlFor="louie">Tequila shot</label>
+            <input type="radio" id="4d" name="drink" />
+            <label htmlFor="4d">Tequila shot</label>
           </div>
 
           <p>5. Would you like to receive more salary:</p>
           <div className="Buttons">
             <button onClick={noButtonHandler}>no</button>
-            <button
+            <div
+              className="YesButtonOutter"
               onMouseMove={onMouseEnterHandler}
+              onMouseOver={onMouseEnterHandler}
               onTransitionEnd={onTransitionEndHandler}
-              onClick={yesButtonHandler}
               style={{ top: `${top}px`, left: `${left}px` }}
             >
-              yes
-            </button>
+              <button onClick={yesButtonHandler}>yes</button>
+            </div>
           </div>
         </div>
         <img src={img1} alt="img1" height="127" width="900" />
